@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Balance - Yoga Studio Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #00b2b2;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #00b2b2;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .schedule-item {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .schedule-item h3 {
+      color: #00b2b2;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .schedule-item p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      background-color: #00b2b2;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      background-color: white;
+      color: #00b2b2;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #e0f7f7;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Studio Balance</h1>
+    <p>Willkommen bei Studio Balance – Deinem Yoga Studio für innere Ruhe und Balance!</p>
+  </header>
+
+  <section class="container">
+    <h2 class="section-title">Unsere Kurse</h2>
+    <div class="schedule">
+      <div class="schedule-item">
+        <h3>Vinyasa Yoga</h3>
+        <p>Montag - 10:00 - 11:30 Uhr</p>
+        <p>Fließende Bewegungen und Atemübungen für Körper und Geist.</p>
+      </div>
+      <div class="schedule-item">
+        <h3>Hatha Yoga</h3>
+        <p>Mittwoch - 18:00 - 19:30 Uhr</p>
+        <p>Sanfte Asanas zur Förderung der Flexibilität und Körperwahrnehmung.</p>
+      </div>
+      <div class="schedule-item">
+        <h3>Yin Yoga</h3>
+        <p>Freitag - 09:00 - 10:30 Uhr</p>
+        <p>Lange gehaltene Posen, um tief in die Muskulatur zu dehnen und zu entspannen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta container">
+    <h2 class="section-title">Melde dich an!</h2>
+    <p>Fange noch heute mit deiner Yoga-Reise an – für mehr Flexibilität, Ruhe und Ausgeglichenheit.</p>
+    <a href="mailto:studio.balance@yoga.com">Jetzt Anmelden</a>
+  </section>
+
+</body>
+</html>
