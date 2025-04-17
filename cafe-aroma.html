@@ -1,108 +1,173 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friseur Glanzpunkt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Aroma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fffaf9;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
       color: #333;
       line-height: 1.6;
     }
-    header {
-      background: linear-gradient(135deg, #c471ed, #f7797d);
+
+    /* Allgemeine Stil-Regeln */
+    header, footer {
+      background: #D1A35E;
       color: white;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #c471ed;
-    }
-    .services ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    .services li {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-    .cta {
-      background-color: #f7797d;
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
-      border-radius: 12px;
-    }
-    .cta a {
-      background: white;
-      color: #f7797d;
-      padding: 0.8rem 1.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Responsives Layout */
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: white;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: #D1A35E;
+      margin-bottom: 1.5rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .menu img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+      object-fit: cover;
+    }
+
+    a {
+      color: #D1A35E;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #D1A35E;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #D1A35E;
+      color: white;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    /* Mobile-Optimierung */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 2rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      section p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      section h2 {
+        font-size: 1.8rem;
+      }
+
+      section p {
+        font-size: 0.9rem;
+      }
+
+      a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Friseur Glanzpunkt</h1>
-    <p>Dein Look. Dein Stil. Dein Moment.</p>
+    <h1>Café Aroma</h1>
+    <p>Genießen Sie köstlichen Kaffee, frisch gebackene Croissants und mehr!</p>
   </header>
 
-  <section class="about">
-    <h2>Willkommen!</h2>
-    <p>Bei Friseur Glanzpunkt bekommst du moderne Haarschnitte, persönliche Beratung und ein entspanntes Ambiente – ganz ohne Stress.</p>
+  <!-- Spezialitäten Section -->
+  <section>
+    <h2>Unsere Spezialitäten</h2>
+    <p>Wir bieten eine Vielzahl an Kaffee- und Teespezialitäten sowie leckere Snacks an. Unsere frisch gebackenen Croissants und Kuchen sind der perfekte Begleiter für eine entspannte Auszeit.</p>
+    
   </section>
 
-  <section class="services">
-    <h2>Unsere Leistungen</h2>
-    <ul>
-      <li><strong>Haarschnitt Damen/Herren</strong><br>Modern & klassisch</li>
-      <li><strong>Coloration</strong><br>Strähnen, Balayage, Tönung</li>
-      <li><strong>Styling</strong><br>Events, Hochzeit, Shooting</li>
-    </ul>
+  <!-- Öffnungszeiten Section -->
+  <section>
+    <h2>Öffnungszeiten</h2>
+    <p>Montag bis Freitag: 7:30 – 18:00 Uhr</p>
+    <p>Samstag: 8:00 – 16:00 Uhr</p>
+    <p>Sonntag: Geschlossen</p>
   </section>
 
-  <section class="cta">
-    <h2>Jetzt Termin vereinbaren</h2>
-    <p>Du willst einen neuen Look? Ruf uns an oder schreib uns per WhatsApp!</p>
-    <a href="#">Kontakt aufnehmen</a>
+  <!-- Kontakt Section -->
+  <section>
+    <h2>Kontakt</h2>
+    <p>Adresse: Musterstraße 45, 89231 Neu-Ulm</p>
+    <p>Telefon: <a href="tel:+497317254908">0731 7254908</a></p>
+    <p>E-Mail: <a href="mailto:cafe-aroma@example.com">cafe-aroma@example.com</a></p>
+    <p><a href="" target="_blank">Hier klicken für Wegbeschreibung</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    Dies ist ein fiktives Beispielprojekt für Portfolio-Zwecke.
+    <p>&copy; 2025 Café Aroma | Alle Rechte vorbehalten</p>
   </footer>
+
 </body>
 </html>
