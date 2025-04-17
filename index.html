@@ -6,11 +6,37 @@
   <title>Studio Raees – Webdesign</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    /* Dein bestehendes Styling bleibt unverändert */
+    /* ... */
+    
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switch button {
+      background: white;
+      border: 2px solid #00b2b2;
+      color: #00b2b2;
+      padding: 6px 12px;
+      margin-left: 5px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .language-switch button:hover {
+      background: #00b2b2;
+      color: white;
+    }
+
+  
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f9f9f9;
@@ -22,7 +48,7 @@
     /* Header Style */
     header {
       display: flex;
-      justify-content: center;  /* Zentriert den Inhalt */
+      justify-content: center;
       align-items: center;
       flex-direction: column;
       margin-bottom: 4rem;
@@ -42,6 +68,28 @@
     header p {
       font-size: 1.2rem;
       color: #555;
+    }
+
+    /* Language Switcher */
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switch button {
+      background: white;
+      border: 2px solid #00b2b2;
+      color: #00b2b2;
+      padding: 6px 12px;
+      margin-left: 5px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .language-switch button:hover {
+      background: #00b2b2;
+      color: white;
     }
 
     /* Allgemeine Section Style */
@@ -84,7 +132,7 @@
       background: white;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
       text-align: center;
     }
@@ -100,16 +148,16 @@
 
     /* Call-to-Action Box */
     .cta {
-  background-color: #00b2b2;
-  color: white;
-  border-radius: 12px;
-  text-align: center;
-  padding: 1.2rem 2rem;  /* Weniger oben/unten */
-  margin-top: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+      background-color: #00b2b2;
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+      padding: 1.2rem 2rem;
+      margin-top: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     .cta a {
       display: inline-block;
@@ -144,74 +192,175 @@
       color: #aaa;
       margin-top: 5rem;
     }
+
+    /* Testimonials Section */
+    .testimonials ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .testimonials li {
+      background: linear-gradient(135deg, #ffffff, #f0f9f9);
+      padding: 1.8rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 178, 178, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonials li::before {
+      content: "★";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 4rem;
+      color: rgba(0, 178, 178, 0.1);
+      transform: rotate(20deg);
+    }
+
+    .testimonials li:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 35px rgba(0, 178, 178, 0.2);
+    }
+
+    .testimonials p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonials strong {
+      color: #00b2b2;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+  
   </style>
 </head>
 <body>
   <header>
-    <img src="SR_2_logo-removebg-preview.png" alt="Studio Raees Logo" />
-    <h1>Studio Raees</h1>
-    <p>Ich bin Raees Khan – Schüler, Webdesigner und baue moderne Webseiten für kleine Unternehmen.</p>
+    <div class="language-switch">
+      <button onclick="switchLanguage('de')">🇩🇪 DE</button>
+      <button onclick="switchLanguage('en')">🇬🇧 EN</button>
+    </div>
+    <img src="C:\Users\Metro\Downloads\SR_2_logo-removebg-preview.png" alt="Studio Raees Logo" />
+    <h1 data-lang="de">Studio Raees</h1>
+    <h1 data-lang="en" style="display:none;">Studio Raees</h1>
+    <p data-lang="de">Ich bin Raees Khan – Schüler, Webdesigner und baue moderne Webseiten für kleine Unternehmen.</p>
+    <p data-lang="en" style="display:none;">I'm Raees Khan – student, web designer, and I build modern websites for small businesses.</p>
   </header>
 
   <section class="about container">
-    <h2 class="section-title">Über mich</h2>
-    <p>Ich bin Raees Khan, 14 Jahre alt, und habe eine Leidenschaft für Design und Technik. Das Webdesign fasziniert mich besonders, weshalb ich mir selbst beigebracht habe, wie man moderne und benutzerfreundliche Webseiten erstellt.</p>
-    <p>Mein Ziel ist es, kleinen Unternehmen einen professionellen, aber erschwinglichen Online-Auftritt zu ermöglichen. Dabei lege ich großen Wert auf eine schnelle Ladezeit, ein modernes Design und eine mobile Optimierung, damit jede Webseite auf allen Geräten gut aussieht.</p>
-    <p>Ich arbeite mit den gängigen Webtechnologien wie HTML, CSS und JavaScript, um Webseiten klar und sauber zu programmieren – ohne unnötige Komplexität. Jede Seite, die ich erstelle, ist individuell und auf die Bedürfnisse meiner Kunden zugeschnitten.</p>
-</section>
+    <h2 class="section-title" data-lang="de">Über mich</h2>
+    <h2 class="section-title" data-lang="en" style="display:none;">About Me</h2>
+    <p data-lang="de">Ich bin Raees Khan, 14 Jahre alt, und habe eine Leidenschaft für Design und Technik. Das Webdesign fasziniert mich besonders, weshalb ich mir selbst beigebracht habe, wie man moderne und benutzerfreundliche Webseiten erstellt.</p>
+    <p data-lang="en" style="display:none;">I'm Raees Khan, 14 years old, and I have a passion for design and technology. Web design fascinates me, which is why I taught myself how to create modern and user-friendly websites.</p>
+    <p data-lang="de">Mein Ziel ist es, kleinen Unternehmen einen professionellen, aber erschwinglichen Online-Auftritt zu ermöglichen. Dabei lege ich großen Wert auf eine schnelle Ladezeit, ein modernes Design und eine mobile Optimierung, damit jede Webseite auf allen Geräten gut aussieht.</p>
+    <p data-lang="en" style="display:none;">My goal is to provide small businesses with a professional yet affordable online presence. I place great importance on fast load times, modern design, and mobile optimization, so that every website looks great on all devices.</p>
+    <p data-lang="de">Ich arbeite mit den gängigen Webtechnologien wie HTML, CSS und JavaScript, um Webseiten klar und sauber zu programmieren – ohne unnötige Komplexität. Jede Seite, die ich erstelle, ist individuell und auf die Bedürfnisse meiner Kunden zugeschnitten.</p>
+    <p data-lang="en" style="display:none;">I work with common web technologies like HTML, CSS, and JavaScript to code websites clearly and cleanly – without unnecessary complexity. Every page I create is unique and tailored to the needs of my clients.</p>
+  </section>
 
   <section class="projects container">
-    <h2 class="section-title">Meine Arbeiten</h2>
+    <h2 class="section-title" data-lang="de">Meine Arbeiten</h2>
+    <h2 class="section-title" data-lang="en" style="display:none;">My Work</h2>
     <ul>
-      <li>
-        <a href="friseur-mustermann.html">Friseur Glanzpunkt</a>
-        <small>Redesign mit modernem Onepager + Mobilversion</small>
+      <li data-lang="de">
+        <a href="./demos/friseur-mustermann.html">Friseur Glanzpunkt</a>
+        <small data-lang="de">Redesign mit modernem Onepager + Mobilversion</small>
       </li>
-      <li>
-        <a href="cafe-aroma.html">Cafe-aroma</a>
-        <small>Schönes Menü, Bildergalerie und Online-Kontakt</small>
+      <li data-lang="en" style="display:none;">
+        <a href="./demos/friseur-mustermann.html">Friseur Glanzpunkt</a>
+        <small data-lang="en">Redesign with modern onepager + mobile version</small>
       </li>
-      <li>
-        <a href="studio-balance.html">Studio-balance</a>
-        <small>Website für Yogastudio mit Stundenplan & Kontakt</small>
+      <li data-lang="de">
+        <a href="./demos/cafe-aroma.html">Cafe-aroma</a>
+        <small data-lang="de">Schönes Menü, Bildergalerie und Online-Kontakt</small>
+      </li>
+      <li data-lang="en" style="display:none;">
+        <a href="./demos/cafe-aroma.html">Cafe-aroma</a>
+        <small data-lang="en">Beautiful menu, photo gallery, and online contact</small>
+      </li>
+      <li data-lang="de">
+        <a href="./demos/studio-balance.html">Studio-balance</a>
+        <small data-lang="de">Website für Yogastudio mit Stundenplan & Kontakt</small>
+      </li>
+      <li data-lang="en" style="display:none;">
+        <a href="./demos/studio-balance.html">Studio-balance</a>
+        <small data-lang="en">Website for yoga studio with timetable & contact</small>
       </li>
     </ul>
   </section>
 
-   <section class="testimonials container">
-    <h2 class="section-title">Feedback</h2>
-    <ul style="list-style: none; padding-left: 0;">
-      <li style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
-        <p style="color: #555;">„Raees ist zwar noch jung, aber man merkt sofort: er hat richtig Bock aufs Programmieren. Seine erste Version unserer Seite war schon super – und er verbessert sich ständig.“</p>
+  <section class="testimonials container">
+    <h2 class="section-title" data-lang="de">Feedback</h2>
+    <h2 class="section-title" data-lang="en" style="display:none;">Feedback</h2>
+    <ul>
+      <li data-lang="de">
+        <p>„Raees ist zwar noch jung, aber man merkt sofort: er hat richtig Bock aufs Programmieren. Seine erste Version unserer Seite war schon super – und er verbessert sich ständig.“</p>
         <p><strong>– Herr Weber, Nachbar & Ladenbesitzer</strong></p>
       </li>
-      <li style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
-        <p style="color: #555;">„Ich finde es beeindruckend, wie diszipliniert Raees arbeitet. Er meldet sich immer schnell zurück und versucht echt, alles so umzusetzen wie man es sich vorstellt.“</p>
+      <li data-lang="en" style="display:none;">
+        <p>"Raees is still young, but you can immediately tell that he's really passionate about programming. His first version of our website was already great – and he keeps improving." </p>
+        <p><strong>– Mr. Weber, neighbor & shop owner</strong></p>
+      </li>
+      <li data-lang="de">
+        <p>„Ich finde es beeindruckend, wie diszipliniert Raees arbeitet. Er meldet sich immer schnell zurück und versucht echt, alles so umzusetzen wie man es sich vorstellt.“</p>
         <p><strong>– Yasmin K., Familienfreundin</strong></p>
       </li>
-      <li style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-        <p style="color: #555;">"Raees reminds me a lot of how I started. I was also 14 when I got into web design, just messing around with code and building small projects. Now I work professionally — and I can see that same spark in him. He’s focused, self-taught, and keeps getting better every week. If he keeps going like this, he’ll be building amazing things very soon."</p>
-        <p><strong>– Hassan, cousin from Pakistan</strong></p>
+      <li data-lang="en" style="display:none;">
+        <p>"I find it impressive how disciplined Raees works. He always gets back to me quickly and really tries to implement everything as I envision it."</p>
+        <p><strong>– Yasmin K., family friend</strong></p>
       </li>
-      
+
+      <li data-lang="en" style="display: none;">
+        <p>"Raees reminds me a lot of how I started. I was also 14 when I got into web design, just messing around with code and building small projects. Now I work professionally — and I can see that same spark in him. He’s focused, self-taught, and keeps getting better every week. If he keeps going like this, he’ll be building amazing things very soon."</p>
+        <p><strong>– Hassan, cousin & professional web designer from Pakistan</strong></p>
+      </li>
+
+      <li data-lang="de">
+        <p>„Raees erinnert mich sehr daran, wie ich damals angefangen habe. Ich war auch 14, als ich mit Webdesign angefangen habe, habe einfach mit Code rumexperimentiert und kleine Projekte gebaut. Jetzt arbeite ich professionell — und ich sehe genau dasselbe Feuer in ihm. Er ist fokussiert, hat sich alles selbst beigebracht und wird jede Woche besser. Wenn er so weitermacht, wird er bald großartige Dinge bauen.“
+         <p><strong> – Hassan, Cousin & professioneller Webdesigner aus Pakistan</strong></p>
+        </p>
+      </li>
     </ul>
   </section>
 
   <section class="cta container">
-    <h2 class="section-title">Willst du mit mir arbeiten?</h2>
-    <p>Ich kann dir ein kostenloses Beispiel bauen – oder direkt deine bestehende Seite modernisieren.</p>
-    <a href="mailto:raees.official403@gmail.com">Jetzt Kontakt aufnehmen</a>
+    <h2 class="section-title" data-lang="de">Willst du mit mir arbeiten?</h2>
+    <h2 class="section-title" data-lang="en" style="display:none;">Want to work with me?</h2>
+    <p data-lang="de">Ich kann dir ein kostenloses Beispiel bauen – oder direkt deine bestehende Seite modernisieren.</p>
+    <p data-lang="en" style="display:none;">I can build you a free sample – or modernize your existing website directly.</p>
+    <a href="mailto:raees.official403@gmail.com" data-lang="de">Jetzt Kontakt aufnehmen</a>
+    <a href="mailto:raees.official403@gmail.com" data-lang="en" style="display:none;">Get in touch now</a>
   </section>
 
   <section class="contact container">
-    <h2 class="section-title">Kontakt</h2>
-    <p>📧 E-Mail: <a href="mailto:raees.official403@gmail.com">raees.official403@gmail.com</a></p>
-    <p>📱 WhatsApp: <a href="tel:+4917640420402">0176 40420402</a></p>
-    <p>📸 Instagram: <a href="https://instagram.com/raees.khann007" target="_blank">@raees.khann007</a></p>
+    <h2 class="section-title" data-lang="de">Kontakt</h2>
+    <h2 class="section-title" data-lang="en" style="display:none;">Contact</h2>
+    <p data-lang="de">📧 E-Mail: <a href="mailto:raees.official403@gmail.com">raees.official403@gmail.com</a></p>
+    <p data-lang="en" style="display:none;">📧 Email: <a href="mailto:raees.official403@gmail.com">raees.official403@gmail.com</a></p>
+    <p data-lang="de">📱 WhatsApp: <a href="tel:+4917640420402">0176 40420402</a></p>
+    <p data-lang="en" style="display:none;">📱 WhatsApp: <a href="tel:+4917640420402">0176 40420402</a></p>
+    <p data-lang="de">📸 Instagram: <a href="https://instagram.com/raees.khann007" target="_blank">@raees.khann007</a></p>
+    <p data-lang="en" style="display:none;">📸 Instagram: <a href="https://instagram.com/raees.khann007" target="_blank">@raees.khann007</a></p>
   </section>
 
   <footer>
-    © 2025 Studio Raees. Alle Rechte vorbehalten.
+    <p data-lang="de">© 2025 Studio Raees. Alle Rechte vorbehalten.</p>
+    <p data-lang="en" style="display:none;">© 2025 Studio Raees. All rights reserved.</p>
   </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
