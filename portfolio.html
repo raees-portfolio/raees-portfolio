@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Raees – Webdesign</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    /* Header Style */
+    header {
+      display: flex;
+      justify-content: center;  /* Zentriert den Inhalt */
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 4rem;
+      padding-top: 2rem;
+      text-align: center;
+    }
+    header img {
+      width: 120px; /* Größe des Logos angepasst */
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #00b2b2;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Allgemeine Section Style */
+    section {
+      padding: 3rem 0;
+      opacity: 1;
+      transform: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Titel der Sektionen */
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #00b2b2;
+      text-align: center;
+    }
+
+    /* Über mich Section */
+    .about p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    /* Projekte Section */
+    .projects ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .projects li {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .projects li:hover {
+      transform: translateY(-5px);
+    }
+    .projects a {
+      text-decoration: none;
+      color: #00b2b2;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    /* Call-to-Action Box */
+    .cta {
+  background-color: #00b2b2;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  padding: 1.2rem 2rem;  /* Weniger oben/unten */
+  margin-top: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: white;
+      color: #00b2b2;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .cta a:hover {
+      background: #e0f7f7;
+    }
+
+    /* Kontakt Section */
+    .contact p {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0.8rem 0;
+    }
+    .contact a {
+      color: #00b2b2;
+      text-decoration: none;
+    }
+
+    /* Footer Style */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 5rem;
+    }
+
+    .testimonials ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.testimonials li {
+  background: linear-gradient(135deg, #ffffff, #f0f9f9);
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 178, 178, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials li::before {
+  content: "★";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 4rem;
+  color: rgba(0, 178, 178, 0.1);
+  transform: rotate(20deg);
+}
+
+.testimonials li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0, 178, 178, 0.2);
+}
+
+.testimonials p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonials strong {
+  color: #00b2b2;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\Metro\Downloads\SR_2_logo-removebg-preview.png" alt="Studio Raees Logo" />
+    <h1>Studio Raees</h1>
+    <p>Ich bin Raees Khan – Schüler, Webdesigner und baue moderne Webseiten für kleine Unternehmen.</p>
+  </header>
+
+  <section class="about container">
+    <h2 class="section-title">Über mich</h2>
+    <p>Ich bin Raees Khan, 14 Jahre alt, und habe eine Leidenschaft für Design und Technik. Das Webdesign fasziniert mich besonders, weshalb ich mir selbst beigebracht habe, wie man moderne und benutzerfreundliche Webseiten erstellt.</p>
+    <p>Mein Ziel ist es, kleinen Unternehmen einen professionellen, aber erschwinglichen Online-Auftritt zu ermöglichen. Dabei lege ich großen Wert auf eine schnelle Ladezeit, ein modernes Design und eine mobile Optimierung, damit jede Webseite auf allen Geräten gut aussieht.</p>
+    <p>Ich arbeite mit den gängigen Webtechnologien wie HTML, CSS und JavaScript, um Webseiten klar und sauber zu programmieren – ohne unnötige Komplexität. Jede Seite, die ich erstelle, ist individuell und auf die Bedürfnisse meiner Kunden zugeschnitten.</p>
+</section>
+
+  <section class="projects container">
+    <h2 class="section-title">Meine Arbeiten</h2>
+    <ul>
+      <li>
+        <a href="./demos/friseur-mustermann.html">Friseur Glanzpunkt</a>
+        <small>Redesign mit modernem Onepager + Mobilversion</small>
+      </li>
+      <li>
+        <a href="./demos/cafe-aroma.html">Cafe-aroma</a>
+        <small>Schönes Menü, Bildergalerie und Online-Kontakt</small>
+      </li>
+      <li>
+        <a href="./demos/studio-balance.html">Studio-balance</a>
+        <small>Website für Yogastudio mit Stundenplan & Kontakt</small>
+      </li>
+    </ul>
+  </section>
+
+  <section class="testimonials container">
+    <h2 class="section-title">Feedback</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
+        <p style="color: #555;">„Raees ist zwar noch jung, aber man merkt sofort: er hat richtig Bock aufs Programmieren. Seine erste Version unserer Seite war schon super – und er verbessert sich ständig.“</p>
+        <p><strong>– Herr Weber, Nachbar & Ladenbesitzer</strong></p>
+      </li>
+      <li style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
+        <p style="color: #555;">„Ich finde es beeindruckend, wie diszipliniert Raees arbeitet. Er meldet sich immer schnell zurück und versucht echt, alles so umzusetzen wie man es sich vorstellt.“</p>
+        <p><strong>– Yasmin K., Familienfreundin</strong></p>
+      </li>
+      <li style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <p style="color: #555;">"Raees reminds me a lot of how I started. I was also 14 when I got into web design, just messing around with code and building small projects. Now I work professionally — and I can see that same spark in him. He’s focused, self-taught, and keeps getting better every week. If he keeps going like this, he’ll be building amazing things very soon."</p>
+        <p><strong>– Hassan, cousin & professional web designer from Pakistan</strong></p>
+      </li>
+      
+    </ul>
+  </section>
+  
+  
+
+  <section class="cta container">
+    <h2 class="section-title">Willst du mit mir arbeiten?</h2>
+    <p>Ich kann dir ein kostenloses Beispiel bauen – oder direkt deine bestehende Seite modernisieren.</p>
+    <a href="mailto:raees.official403@gmail.com">Jetzt Kontakt aufnehmen</a>
+  </section>
+
+  <section class="contact container">
+    <h2 class="section-title">Kontakt</h2>
+    <p>📧 E-Mail: <a href="mailto:raees.official403@gmail.com">raees.official403@gmail.com</a></p>
+    <p>📱 WhatsApp: <a href="tel:+4917640420402">0176 40420402</a></p>
+    <p>📸 Instagram: <a href="https://instagram.com/raees.khann007" target="_blank">@raees.khann007</a></p>
+  </section>
+
+  <footer>
+    © 2025 Studio Raees. Alle Rechte vorbehalten.
+  </footer>
+</body>
+</html>
