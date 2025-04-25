@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Raees – Webdesign</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <img src="img/SR_2_logo.png" alt="Studio Raees Logo" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/SR_2_logo.png" type="image/png" />
 
   <style>
     /* Dein bestehendes Styling bleibt unverändert */
@@ -244,12 +244,12 @@
   </style>
 </head>
 <body>
-  <header>
+   <header>
     <div class="language-switch">
       <button onclick="switchLanguage('de')">🇩🇪 DE</button>
       <button onclick="switchLanguage('en')">🇬🇧 EN</button>
     </div>
-    <img src="C:\Users\Metro\Downloads\SR_2_logo-removebg-preview.png" alt="Studio Raees Logo" />
+    <img src="img/SR_2_logo.png" alt="Studio Raees Logo" />
     <h1 data-lang="de">Studio Raees</h1>
     <h1 data-lang="en" style="display:none;">Studio Raees</h1>
     <p data-lang="de">Ich bin Raees Khan – Schüler, Webdesigner und baue moderne Webseiten für kleine Unternehmen.</p>
@@ -356,8 +356,7 @@
     <p data-lang="de">© 2025 Studio Raees. Alle Rechte vorbehalten.</p>
     <p data-lang="en" style="display:none;">© 2025 Studio Raees. All rights reserved.</p>
   </footer>
-
-  <script>
+<script>
     function switchLanguage(lang) {
       document.querySelectorAll('[data-lang]').forEach(el => {
         el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
